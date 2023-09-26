@@ -1,0 +1,318 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Global styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/* Style the logo */
+.logo img {
+    height: 50px; /* Adjust the height as needed */
+}
+
+/* Style the menu */
+.menu {
+    display: flex;
+    list-style: none;
+    margin-right: 0; /* Remove the default margin */
+}
+
+.menu li {
+    margin-left: 20px; /* Adjust the spacing between menu items as needed */
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff8c00; /* Change the color on hover as desired */
+}
+
+
+
+/* Header styles */
+
+.hero {
+    background-image: url('bg1.avif'); /* Replace with your header background image */
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e65300;
+}
+
+/* Features section styles */
+.features {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.features h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid with minimum column width */
+    gap: 20px; /* Gap between grid items */
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.feature i {
+    font-size: 48px; /* Adjust icon size as needed */
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 18px;
+}
+
+
+/* Reviews section styles */
+.reviews {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+    overflow: hidden; /* Hide overflow for horizontal scrolling */
+}
+
+.reviews h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333; /* Adjust text color as needed */
+}
+
+.review-slider {
+    display: flex; /* Display reviews in a row */
+    width: 100%; /* Ensure the reviews container takes full width */
+    animation: slide 10s linear infinite; /* Set animation properties (adjust duration as needed) */
+}
+
+.review {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex: 0 0 33%; /* Initially, show 3 reviews; adjust as needed */
+    margin-right: 20px; /* Add spacing between reviews */
+    min-width: 300px; /* Minimum width for individual reviews; adjust as needed */
+}
+
+.reviewer-photo img {
+    width: 100px; /* Adjust image size as needed */
+    height: 100px; /* Adjust image size as needed */
+    border-radius: 50%;
+}
+
+.review-content p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555; /* Adjust text color as needed */
+}
+
+.author {
+    font-size: 16px;
+    color: #777; /* Adjust author text color as needed */
+}
+
+/* CSS animation keyframes for sliding effect */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Slide reviews to the left */
+    }
+}
+
+
+
+
+
+
+/* Clients section styles */
+.clients {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+    overflow: hidden; /* Hide overflow for horizontal scrolling */
+}
+
+.clients h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333; /* Adjust text color as needed */
+}
+
+.client-slider {
+    display: flex; /* Display client logos in a row */
+    width: 100%; /* Ensure the client logos container takes full width */
+    animation: slideClients 10s linear infinite; /* Set animation properties (adjust duration as needed) */
+}
+
+.client {
+    flex: 0 0 33%; /* Initially, show 3 client logos; adjust as needed */
+    margin-right: 20px; /* Add spacing between client logos */
+    min-width: 200px; /* Minimum width for individual client cards; adjust as needed */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.client img {
+    width: 100px; /* Adjust image size as needed */
+    height: 100px; /* Adjust image size as needed */
+    border-radius: 50%;
+}
+
+/* CSS animation keyframes for sliding effect */
+/* @keyframes slideClients {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+} */
+
+
+
+/* Team section styles */
+.team {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.team h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.team-member img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+    transform: scale(1.1);
+}
+
+.team-member h3 {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.team-member p {
+    font-size: 20px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Media Queries (for responsiveness) */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+}
